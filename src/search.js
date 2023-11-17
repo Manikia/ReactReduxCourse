@@ -10,7 +10,7 @@ const Search = ({onSubmitChange}) => {
 
     const handleSubmit = async (searchData) => {
         searchData.preventDefault();
-       onSubmitChange(search) // sends the search city up to app.js setCity
+        onSubmitChange(search) // sends the search city up to app.js setCity
         
       }
     const handleOnChange = (searchData) => {

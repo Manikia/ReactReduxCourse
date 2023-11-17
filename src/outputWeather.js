@@ -1,17 +1,17 @@
 import { useState, useEffect} from "react";
 import getCityWeather from "./getCityWeather";
+import './outputCitiesStyling.css'
 
-const OutputWeather = ({ cityName }) => {
+const OutputWeather = ({ cityName, unit }) => {
     const [cityData, setCityData] = useState()
 
     useEffect(()=>{
         const fetchData = async () => {
-            const response = await getCityWeather(cityName)
+            const response = await getCityWeather(cityName, unit)
             setCityData(response)
         }
-
         fetchData()
-    }, [cityName])
+    }, [cityName, unit]);
 
     
 
@@ -22,7 +22,8 @@ const OutputWeather = ({ cityName }) => {
     }
     else{
         return (
-            <div>
+            <div className="cities">
+            
             <h1>location: {cityData.location}</h1>
             <h1>current Temperature: {cityData.currentTemp}</h1>
             <h1>Min Temperature: {cityData.tempMin}</h1>

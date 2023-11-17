@@ -1,0 +1,9 @@
+.cities
+{
+    width: 200px;
+    border:4px solid yellowgreen;
+    padding: 20px;
+    margin: 20px;
+    color: grey;
+    font-size: 8px;
+}
